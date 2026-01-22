@@ -73,10 +73,10 @@ public:
                                                      RegionData* data, size_t size,
                                                      size_t actual_free);
 
-  void record_cycle_start();
-  void record_success_concurrent();
-  void record_success_degenerated();
-  void record_success_full();
+  virtual void record_cycle_start() override;
+  virtual void record_success_concurrent() override;
+  virtual void record_degenerated() override;
+  virtual void record_success_full() override;
 
   virtual bool should_start_gc();
 
